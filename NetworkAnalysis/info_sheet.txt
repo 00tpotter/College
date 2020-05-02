@@ -1,0 +1,51 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name:  Thomas (Teddy) Potter
+
+Lecture section:  1050
+
+Recitation day and time:  Friday 10-10:50
+
+Assignment #:	4  
+
+Program due date: 4/5 
+
+Handed in date:  4/4
+
+Source code file name(s):
+Bag.java
+Connected.java
+Dijkstras.java
+IndexMinPQ.java
+NetworkAnalysis.java
+NetworkEdge.java
+NetworkGraph.java
+Stack.java
+StdIn.java
+StdOut.java
+
+Other file name(s) (if relevant):
+
+
+
+Does your program run without error?:	Yes, sometimes it gives warnings when you compile, but no errors.
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+
+
+Additional comments to the grader:
+If you need to examine the contents of the graphs, my implementation has a toString() method for 
+NetworkGraph.java and NetworkEdge.java
+
+
+
+
+
+

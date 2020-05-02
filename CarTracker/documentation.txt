@@ -1,0 +1,98 @@
+Thomas (Teddy) Potter
+tep32@pitt.edu
+4242571
+
+Note: if you need to examine the contents of the PQ to ensure that my implementation is correct, you can
+either call prices.printPQ() or mileages.printPQ() or uncomment the places where I have commented it out.
+ 
+- Implementation Explanation - 
+For the indexable priority queue that backs my project, I simply used the textbook author's
+code for IndexMinPQ.java and modified it for my needs into CarPQ.java. For my structure to efficiently 
+look up the VIN numbers of cars, I used a DLB for its constant time lookup and lower memory 
+utilization compared to an R-way trie that would have lots of unused indexes. Furthermore, to implement 
+retrieval on the set of cars by make and model, I again utilized a DLB that stored a CarPQ at the end of 
+the key so that the minimum of each make and model could be efficiently stored and retrieved.
+
+There are two instances of CarPQ.java in CarTracker.java: one to store the set of all cars by prioritizing 
+price and another to store the set of all cars by mileage. Furthermore, there are four instances of 
+CarDLB.java (the DLB structure that implements lookup) in CarTracker.java: one to store the VIN numbers of
+the set of all cars by price, one to store the VIN numbers of the set of all cars by mileage, one to store
+the set of cars by make and model and their price, and another to store the set of cars by make and model
+and their mileage. Essentially, each set of cars stored in a data structure is stored twice so that it can
+be prioritzed properly by either its price or mileage. Although this uses more space than storing each set
+once, it makes implementing all of the methods in log(n) time much easier and prevents unnecessary confusion
+while writing the code. Furthermore, the DLBs that store the sets of cars by make and model will contain a
+CarPQ for each make and model. This may not have been the most memory-efficient implementation, but it allows
+for efficient runtimes to retrieve min cars by make and model, which was the goal of the project.
+
+
+ - Add a car -
+My implementation for adding a car is simple. The insert method in CarPQ.java is the same as the insert
+in IndexMinPQ.java, so its runtime is simply theta(log(n)). While the process of adding a car requires the
+car to be added six times (both price and mileage in the main set of cars, in the DLB storing VIN numbers, 
+and in the DLB storing MakeModel), this would still calculate to log(n) * 6 which is still just theta(log(n)).
+One space consideration that needs to be taken into account is that the DLB that stores MakeModel also stores
+a CarPQ at the end of every MakeModel key in the structure. This means that an additional CarPQ is created
+for every single MakeModel. This could lead to additional memory usage, although there isn't a limit to 
+memory usage in the project specifications.
+
+ - Update a car -
+As with adding a car, the update method in CarPQ.java is the same as the change() method in IndexMinPQ.java 
+and therefore has a runtime of thetha(log(n)).The process of updating a car, however, requires that a car is
+looked up via its VIN number. This is where my DLB implementation comes into play. In this instance, each VIN
+number is stored as a path in a DLB and the car that corresponds to that VIN number is stored at the end of
+each VIN path in the DLB by its index in the CarPQ. Conducting a search for a key in a DLB is theta(w) where
+w is the width of the key. In this case, the width of each key is a fixed 17. Thus, the overall runtime of
+updating a car is theta(17) to look up the VIN + theta(log(n)) to update the car in the CarPQ. Also, my 
+implementation also updates the car in both the CarPQ storing price and the CarPQ storing mileage. Also, in
+a way to ensure that the DLB storing the MakeModel remains updated, the update process will also insert the
+new cars into the MakeModel DLB. Thus, the final runtime is theta(17 + log(n) + log(n) + log(n) + log(n)) 
+which simplifies to theta(log(n)). Updating a car shouldn't increase any memory/space utilization or 
+requirements, but the extra inserts could lead to a little more memory usage.
+
+ - Remove a specific car from consideration -
+As with adding and updating a car, the delete method in CarPQ is the same as delete method in IndexMinPQ.java
+and therefore has a runtime of theta(log(n)). The runtime analysis of the process of removing a specific car
+from consideration is identical to that of updating a car. The VIN lookup taking theta(17) time and the car
+is deleted in both the price CarPQ and the mileage CarPQ. Therefore, the overall runtime is
+theta(17 + log(n) + log(n)) which simplifies to just theta(log(n)). Removing a car shouldn't increase any 
+memory/space utilization or requirements; if anything it should decrease space requirements because there is
+one less item stored in memory. 
+
+ - Retrieve the lowest price car - 
+The process of retrieving the lowest priced car is simple. The minCar() method in CarPQ is the same as the 
+minKey() method in IndexMinPQ.java, which is just indexing an array once and therefore has a runtime of
+theta(1). minCar() only needs to be called once on the CarPQ that stores the set of all cars by price.
+Retrieving the lowest priced car shouldn't increase any memory/space utilization or requirements.
+
+ - Retrieve the lowest mileage car -
+The process of retrieving the lowest mileage car is simple. The minCar() method in CarPQ is the same as the 
+minKey() method in IndexMinPQ.java, which is just indexing an array once and therefore has a runtime of
+theta(1). minCar() only needs to be called once on the CarPQ that stores the set of all cars by mileage.
+Retrieving the lowest mileage car shouldn't increase any memory/space utilization or requirements.
+
+ - Retrieve the lowest price car by make and model - 
+The logic behind retrieving the lowest priced car by make and model is somewhat complex, but the runtime 
+will still come out to theta(w) or theta(log(n)). A car's make and model is stored implicitly in a CarDLB as a single
+string MakeModel. Looking up a car by MakeModel take as much time as the width of the MakeModel string.
+Although the width of MakeModel varies, it should be consistent for same makes and models. When a MakeModel
+is looked up, it will return a CarPQ that is stored at the end of its path in the CarDLB. This CarPQ contains
+each unique car of that specific make and model, and, since it is in a CarPQ, it is stored by priority of
+either price or mileage. Thus, once we have the CarPQ, retrieving the minimum car is simple, and we can use
+the minCar() method with theta(1) runtime to do so. However, since our MakeModel DLB cannot be updated easily
+when a car is removed from consideration, we must check here if the minimum car still exists. So we run a 
+search of the minimum car in the VIN DLB that takes theta(w) time. If the set of all cars still contains the
+min car we already found, the overall runtime is theta(w) + theta(1) + theta(w) which simplifies to theta(w).
+However, if the car had already been removed or updated, we must remove it from the CarPQ which takes 
+theta(log(n)) time. (In the case that it was updated, the updated car would have been reinserted into the 
+CarPQ already). In this situation, the overall runtime would be theta(w) + theta(1) + theta(log(n)) which 
+simplifies to theta(log(n)). The runtime is therefore theta(width of MakeModel) which is constant or it is 
+theta(log(n)). Retrieving the lowest priced car by make and model shouldn't increase any memory/space 
+utilization or requirements.
+
+ - Retrieve the lowest mileage car by make and model - 
+The runtime of retrieving the lowest mileage car by make and model is identical to that of the lowest price
+by make and model. The only difference is that cars are prioritized in their CarPQ's by mileage instead of 
+by price. The runtime is therefore theta(width of MakeModel) which is constant or it is theta(log(n)). 
+Retrieving the lowest mileage car by make and model shouldn't increase any memory/space utilization or 
+requirements.

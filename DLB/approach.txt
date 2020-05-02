@@ -1,0 +1,8 @@
+For storing my user history, I decided to simply use a standard
+Java LinkedList. The reason I did this is because of its fast 
+runtime of O(1) for inserts, which was the main operation I did.
+Furthermore, with the way I displayed the predictions, it 
+required me to do pretty much no work to keep the user history in
+order of most-recently-used. Additionally, it's very easy to 
+iterate through a LinkedList with a for-each loop, and it's 
+simple to use and understand in general.

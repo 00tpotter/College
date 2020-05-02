@@ -1,0 +1,86 @@
+File			| Type			| Original File Size	| Compressed File Size	| Compression Ratio	
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	2960 KB		|	1804 KB		|	1.64		
+			| MyLZW.java nothing	|	2960 KB		|	1751 KB		|	1.69
+all.tar			| MyLZW.java reset	|	2960 KB		|	1151 KB		|	2.57
+			| MyLZW.java monitor	|	2960 KB		|	1778 KB		|	1.66
+			| 7-ZIP -> .7z file	|	2960 KB		|	 810 KB		| 	3.65
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  85 KB		|	  73 KB		|	1.16
+			| MyLZW.java nothing	|	  85 KB		|	  40 KB		|	2.13
+assig2.doc		| MyLZW.java reset	|	  85 KB		|	  40 KB		|	2.13
+			| MyLZW.java monitor	|	  85 KB		|	  40 KB		|	2.13
+			| 7-ZIP	-> .7z file	|	  85 KB		|	  21 KB		| 	4.05
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	1080 KB		|	 904 KB		|	1.19
+			| MyLZW.java nothing	|	1080 KB		|	  80 KB		|	13.5
+bmps.tar		| MyLZW.java reset	|	1080 KB		|	  80 KB		|	13.5
+			| MyLZW.java monitor	|	1080 KB		|	  80 KB		|	13.5
+			| 7-ZIP	-> .7z file	|	1080 KB		|	  53 KB		| 	20.4
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  71 KB		|	  31 KB		|	2.29
+			| MyLZW.java nothing	|	  71 KB		|	  24 KB		|	2.96
+code.txt		| MyLZW.java reset	|	  71 KB		|	  24 KB		|	2.96
+			| MyLZW.java monitor	|	  71 KB		|	  24 KB		|	2.96
+			| 7-ZIP	-> .7z file	|	  71 KB		|	  14 KB		| 	5.07
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  57 KB		|	  24 KB		|	2.38
+			| MyLZW.java nothing	|	  57 KB		|	  21 KB		|	2.71
+code2.txt		| MyLZW.java reset	|	  57 KB		|	  21 KB		|	2.71
+			| MyLZW.java monitor	|	  57 KB		|	  21 KB		|	2.71
+			| 7-ZIP	-> .7z file	|	  57 KB		|	  13 KB		| 	4.75
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	 231 KB		|	 245 KB		|	.943
+			| MyLZW.java nothing	|	 231 KB		|	 153 KB		|	1.51
+edit.exe		| MyLZW.java reset	|	 231 KB		|	 149 KB		|	1.55
+			| MyLZW.java monitor	|	 231 KB		|	 153 KB		|	1.51
+			| 7-ZIP	-> .7z file	|	 231 KB		|	  96 KB		| 	2.41
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	 124 KB		|	 174 KB		|	.713
+			| MyLZW.java nothing	|	 124 KB		|	 160 KB		|	.775
+frosty.jpg		| MyLZW.java reset	|	 124 KB		|	 168 KB		|	.738
+			| MyLZW.java monitor	|	 124 KB		|	 160 KB		|	.775
+			| 7-ZIP	-> .7z file	|	 124 KB		|	 124 KB		| 	1.00
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  17 KB		|	  10 KB		|	1.70
+			| MyLZW.java nothing	|	  17 KB		|	   9 KB		|	1.89
+gone_fishing.bmp	| MyLZW.java reset	|	  17 KB		|	   9 KB		|	1.89
+			| MyLZW.java monitor	|	  17 KB		|	   9 KB		|	1.89
+			| 7-ZIP	-> .7z file	|	  17 KB		|	   8 KB		| 	2.13
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	1193 KB		|	 591 KB		|	2.02
+			| MyLZW.java nothing	|	1193 KB		|	 491 KB		|	2.43
+large.txt		| MyLZW.java reset	|	1193 KB		|	 516 KB		|	2.31
+			| MyLZW.java monitor	|	1193 KB		|	 491 KB		|	2.43
+			| 7-ZIP	-> .7z file	|	1193 KB		|	 394 KB		| 	3.03
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  92 KB		|	 126 KB		|	.730
+			| MyLZW.java nothing	|	  92 KB		|	 120 KB		|	.767
+Lego-big.gif		| MyLZW.java reset	|	  92 KB		|	 120 KB		|	.767
+			| MyLZW.java monitor	|	  92 KB		|	 120 KB		|	.767
+			| 7-ZIP	-> .7z file	|	  92 KB		|	  91 KB		| 	1.01
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	  25 KB		|	  13 KB		|	1.92
+			| MyLZW.java nothing	|	  25 KB		|	  13 KB		|	1.92
+medium.txt		| MyLZW.java reset	|	  25 KB		|	  13 KB		|	1.92
+			| MyLZW.java monitor	|	  25 KB		|	  13 KB		|	1.92
+			| 7-ZIP	-> .7z file	|	  25 KB		|	  11 KB		| 	2.27
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	1350 KB		|	 989 KB		|	1.37
+			| MyLZW.java nothing	|	1350 KB		|	 584 KB		|	2.31
+texts.tar		| MyLZW.java reset	|	1350 KB		|	 577 KB		|	2.34
+			| MyLZW.java monitor	|	1350 KB		|	 584 KB		|	2.31
+			| 7-ZIP	-> .7z file	|	1350 KB		|	 427 KB		| 	3.16
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	 901 KB		|	   5 KB		|      180.2
+			| MyLZW.java nothing	|	 901 KB		|	   4 KB		|      225.3
+wacky.bmp 		| MyLZW.java reset	|	 901 KB		|	   4 KB		|      225.3
+			| MyLZW.java monitor	|	 901 KB		|	   4 KB		|      225.3
+			| 7-ZIP	-> .7z file	|	 901 KB		|	   3 KB		|      300.3
+---------------------------------------------------------------------------------------------------------------------
+			| LZW.java		| 	 154 KB		|	 156 KB		|	.987
+			| MyLZW.java nothing	|	 154 KB		|	  62 KB		|	2.48
+wacky.bmp 		| MyLZW.java reset	|	 154 KB		|	  62 KB		|	2.48
+			| MyLZW.java monitor	|	 154 KB		|	  62 KB		|	2.48
+			| 7-ZIP	-> .7z file	|	 154 KB		|	  43 KB		| 	3.58
+---------------------------------------------------------------------------------------------------------------------

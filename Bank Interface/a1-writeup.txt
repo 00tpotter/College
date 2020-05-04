@@ -1,0 +1,27 @@
+For banks with a single teller, obviously it doesn't matter whether you use a single queue
+or multi queue for the bank, and all of the statistics for each method are identical.
+However, when you increase the teller size to 2, you can see that the average wait for a
+customer is slightly lower for the single queue bank (.36) than the multi queue bank (.43).
+This trend continues as you increase the amount of tellers at the bank to 3, with values of 
+.39 and .54, respectively, for the single queue and multi queue. However, then trend reverses
+with teller amounts of 4 and 5. So, in conclusion, whether a single queue or multi queue is
+better depends on the amount of tellers. A single queue is better for 2 or 3 tellers, while
+a multi queue is better for 4 or 5.
+
+avg wait times for single queue banks:
+2 tellers = .36
+3 tellers = .3988
+4 tellers = .44
+5 tellers = .48
+
+avg wait times for multi queue banks:
+2 tellers = .43
+3 tellers = .54
+4 tellers = .41
+5 tellers = .42
+
+I think 2 tellers is optimal for my bank. While the single queue for 2 tellers is better than
+the multi queue, the 2 tellers option has the lowest overall wait times for both bank types.
+If you were looking for the fastest multi queue option, then I would recommend having 4
+tellers. I listed the average wait times above, so you can see the numbers I'm using to
+justify my answers.
